@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_authentication_title"
+        android:key="orchestration_authentication">
+        <EditTextPreference
+            android:title="@string/pref_username_title"
+            android:key="orchestration_username"
+            android:defaultValue = ""
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+        <EditTextPreference
+            android:title="@string/pref_password_title"
+            android:defaultValue = ""
+            android:key="orchestration_password"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_orchestration_details_title"
+        android:key="orchestration_details">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="orchestration_use_conversation"
+            android:title="@string/pref_orchestration_use_conversation_title"/>
+        <EditTextPreference
+            android:title="@string/pref_orchestration_workspace_title"
+            android:defaultValue = ""
+            android:key="orchestration_workspace"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"/>
+        <EditTextPreference
+            android:title="@string/pref_orchestration_custom_url_title"
+            android:defaultValue = ""
+            android:key="orchestration_custom_url"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

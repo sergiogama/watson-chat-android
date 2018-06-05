@@ -1,0 +1,50 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_authentication_title"
+        android:key="speech_recognition_authentication">
+        <EditTextPreference
+            android:title="@string/pref_username_title"
+            android:key="speech_recognition_username"
+            android:defaultValue = ""
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dependency="speech_recognition_use_native"/>
+        <EditTextPreference
+            android:title="@string/pref_password_title"
+            android:defaultValue = ""
+            android:key="speech_recognition_password"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dependency="speech_recognition_use_native" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_speech_recognition_details_title"
+        android:key="speech_recognition_details">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="speech_recognition_use_native"
+            android:title="@string/pref_speech_recognition_use_native_title"
+            android:disableDependentsState="true"/>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="speech_recognition_use_speech_to_text"
+            android:title="@string/pref_speech_recognition_use_speech_to_text_title" />
+        <EditTextPreference
+            android:title="@string/pref_speech_recognition_custom_url_title"
+            android:defaultValue = ""
+            android:key="speech_recognition_custom_url"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"/>
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/pref_speech_recognition_languages_titles"
+            android:entryValues="@array/pref_speech_recognition_languages_values"
+            android:key="speech_recognition_language"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_speech_recognition_language_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

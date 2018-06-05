@@ -1,0 +1,17 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="com.example.mbigelli.watsonchat.SettingsActivity$SpeechRecognitionFragment"
+        android:title="@string/pref_header_speech_recognition" />
+
+    <header
+        android:fragment="com.example.mbigelli.watsonchat.SettingsActivity$OrchestrationFragment"
+        android:title="@string/pref_header_orchestration" />
+
+    <header
+        android:fragment="com.example.mbigelli.watsonchat.SettingsActivity$VoiceSynthesisFragment"
+        android:title="@string/pref_header_voice_synthesis" />
+
+</preference-headers>

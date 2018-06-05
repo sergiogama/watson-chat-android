@@ -1,0 +1,50 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/pref_authentication_title"
+        android:key="voice_synthesis_authentication">
+        <EditTextPreference
+            android:title="@string/pref_username_title"
+            android:key="voice_synthesis_username"
+            android:defaultValue = ""
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dependency="voice_synthesis_use_native"/>
+        <EditTextPreference
+            android:title="@string/pref_password_title"
+            android:defaultValue = ""
+            android:key="voice_synthesis_password"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dependency="voice_synthesis_use_native" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_voice_synthesis_details_title"
+        android:key="voice_synthesis_details">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="voice_synthesis_use_text_to_speech"
+            android:title="@string/pref_voice_synthesis_use_text_to_speech_title" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="voice_synthesis_use_native"
+            android:title="@string/pref_voice_synthesis_use_native_title"
+            android:disableDependentsState="true"/>
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/pref_voice_synthesis_voices_titles"
+            android:entryValues="@array/pref_voice_synthesis_voices_values"
+            android:key="voice_synthesis_voice"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/pref_voice_synthesis_voice_title" />
+        <EditTextPreference
+            android:title="@string/pref_voice_synthesis_custom_url_title"
+            android:defaultValue = ""
+            android:key="voice_synthesis_custom_url"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
